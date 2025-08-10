@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+}
+h1, h2 {
+    color: #ffcc00;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+/* Wiki content container */
+.content { max-width: 1100px; margin: 0 auto; text-align: left; padding: 0 1rem; }
+
+/* Infobox styles */
+.infobox {
+    float: right;
+    width: 300px;
+    max-width: 40%;
+    margin: 0 0 1rem 1rem;
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.infobox-title {
+    background: #ffcc00;
+    color: #222;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+.infobox-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #1d1d1d;
+}
+.infobox table { width: 100%; border-collapse: collapse; }
+.infobox th, .infobox td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #3a3a3a;
+    text-align: left;
+    vertical-align: top;
+}
+.infobox th { width: 40%; color: #ffcc00; font-weight: 600; }
+.infobox tr:last-child th, .infobox tr:last-child td { border-bottom: none; }
+.infobox a { color: #ffcc00; text-decoration: none; }
+.infobox a:hover { text-decoration: underline; }
+
+/* Requirements table tweaks */
+.requirements-table caption { caption-side: top; text-align: left; padding: 0.25rem 0; color: #ffcc00; font-weight: 600; }
+.requirements-table ul { margin: 0; padding-left: 1.1rem; }
+.requirements-table li { margin: 0.15rem 0; }
+
+/* Infobox logos */
+.infobox-logos { display: grid; grid-template-columns: 1fr; gap: 0.5rem; padding: 0.5rem; background: #1d1d1d; }
+.infobox-logo { width: 100%; height: auto; border-radius: 4px; background: #111; }
+.infobox-logo-controls { display: flex; gap: 0.5rem; justify-content: center; padding: 0.5rem 0.75rem; border-top: 1px solid #3a3a3a; }
+
+/* Infobox logo captions */
+.infobox-logo-item { margin: 0; }
+.infobox-logo-caption { font-size: 0.85rem; color: #cfcfcf; text-align: center; padding: 0.25rem 0.5rem 0.5rem; }
+
+/* Tiny button variant for controls */
+.btn { display: inline-block; padding: 0.5rem 0.9rem; background: #ffcc00; color: #222; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; font-weight: 600; }
+.btn:hover { filter: brightness(0.95); }
+.btn-sm { padding: 0.35rem 0.6rem; font-size: 0.875rem; }
+
+/* Search results list */
+.search-results { list-style: none; margin: 0.5rem 0 0; padding: 0; display: none; max-height: 240px; overflow: auto; border: 1px solid #3a3a3a; border-radius: 6px; background: #2a2a2a; }
+.search-results li { border-bottom: 1px solid #3a3a3a; }
+.search-results li:last-child { border-bottom: none; }
+.search-results a { display: block; padding: 0.5rem 0.75rem; color: #ffcc00; text-decoration: none; }
+.search-results a:hover { background: #1e1e1e; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infobox { float: none; width: auto; max-width: 100%; margin: 0 0 1rem 0; }
+}

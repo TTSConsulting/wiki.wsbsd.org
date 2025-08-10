@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Windows Subsystem for BSD (WSBSD) – Overview, architecture, requirements and resources" />
+    <title>Windows Subsystem for BSD (WSBSD) – Overview</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+    <main class="content fade-in">
+        <p class="mb-2"><a href="../index.html">← Back to Home</a></p>
+        <h1>Windows Subsystem for BSD (WSBSD)</h1>
+
+        <!-- Infobox: summary facts -->
+        <aside class="infobox" role="complementary" aria-labelledby="infobox-title">
+            <div class="infobox-title" id="infobox-title">Windows Subsystem for BSD (WSBSD)</div>
+            <!-- Multiple logos with captions -->
+            <div class="infobox-logos">
+                <figure class="infobox-logo-item">
+                    <img class="infobox-logo" src="../download (1) - Copy.png" alt="WSBSD official logo" loading="lazy" decoding="async" onerror="this.closest('.infobox-logo-item').style.display='none'" />
+                    <figcaption class="infobox-logo-caption">Official logo</figcaption>
+                </figure>
+                <figure class="infobox-logo-item">
+                    <img class="infobox-logo" src="../favicon (1)-3.png" alt="WSBSD app logo" loading="lazy" decoding="async" onerror="this.closest('.infobox-logo-item').style.display='none'" />
+                    <figcaption class="infobox-logo-caption">App logo</figcaption>
+                </figure>
+            </div>
+            <div class="infobox-logo-controls" aria-label="Logo selector">
+                <button class="btn btn-sm" type="button" data-show="0">Official Logo</button>
+                <button class="btn btn-sm" type="button" data-show="1">App Logo</button>
+                <button class="btn btn-sm" type="button" data-show="all">Show all</button>
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Developer</th>
+                        <td>TTSConsulting</td>
+                    </tr>
+                    <tr>
+                        <th>OS family</th>
+                        <td>Windows</td>
+                    </tr>
+                    <tr>
+                        <th>Latest release</th>
+                        <td><a href="https://github.com/TTSConsulting/WSBSD/releases" target="_blank">1.0.0.4-5</a></td>
+                    </tr>
+                    <tr>
+                        <th>Type</th>
+                        <td>Windows subsystem</td>
+                    </tr>
+                    <tr>
+                        <th>License (Code)</th>
+                        <td>MIT License</td>
+                    </tr>
+                    <tr>
+                        <th>License (Binary/Outcome)</th>
+                        <td>All Rights Reserved</td>
+                    </tr>
+                    <tr>
+                        <th>Architectures</th>
+                        <td>amd64</td>
+                    </tr>
+                    <tr>
+                        <th>Source</th>
+                        <td><a href="https://github.com/TTSConsulting/WSBSD" target="_blank">GitHub</a></td>
+                    </tr>
+                    <tr>
+                        <th>Website</th>
+                        <td><a href="https://coolis1362.github.io/wsbsd.org/" target="_blank">wsbsd.org</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+
+        <p>WSBSD (Windows Subsystem for BSD) is a TTSConsulting project focused on Bringing BSD Distros To Windows. This page provides a high-level overview with links to deeper documentation.</p>
+
+        <h2 id="overview">Overview</h2>
+        <p>Designed with reliability and simplicity in mind, WSBSD blends proven BSD foundations with practical tooling. It is suitable for servers, workstations, and embedded scenarios depending on configuration.</p>
+        <ul>
+            <li>Secure-by-default configuration and hardened components</li>
+            <li>Clean userland with sensible defaults</li>
+            <li>Modular features to suit varied environments</li>
+        </ul>
+
+        <h2 id="architecture">Architecture</h2>
+        <p>The architecture embraces a clear separation of concerns and minimalism where possible:</p>
+        <ul>
+            <li>Userland: curated base utilities with optional packages</li>
+            <li>Init/Services: predictable boot and service orchestration</li>
+            <li>Networking: robust, policy-driven configuration</li>
+            <li>Security: defense-in-depth, secure defaults, auditable configs</li>
+        </ul>
+
+        <h2 id="requirements">System Requirements</h2>
+        <p>Baseline requirements for a typical installation. Adjust for your workload and features.</p>
+        <table class="requirements-table">
+            <caption>Supported Windows versions</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Windows Client</th>
+                    <th scope="col">Windows Server</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Windows 7 SP1</li>
+                            <li>Windows 8.1</li>
+                            <li>Windows 10 version 1607–1709</li>
+                            <li>Windows 11 21H2–24H2</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Windows Server 2008 R2 SP1</li>
+                            <li>Windows Server 2012</li>
+                            <li>Windows Server 2012 R2</li>
+                            <li>Windows Server 2016</li>
+                            <li>Windows Server 1709</li>
+                            <li>Windows Server 2022–2025</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="features">Key Features</h2>
+        <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 1rem 0 2rem;">
+            <div style="background:#f8f9fa; padding:1.25rem; border-radius:8px; border-left:4px solid #3498db;">
+                <h3>🔒 Hardened Defaults</h3>
+                <p>Security-first configuration with sensible hardening and minimal attack surface.</p>
+            </div>
+            <div style="background:#f8f9fa; padding:1.25rem; border-radius:8px; border-left:4px solid #2ecc71;">
+                <h3>⚙️ Modular</h3>
+                <p>Enable only what you need. Keep your system lean and easy to audit.</p>
+            </div>
+            <div style="background:#f8f9fa; padding:1.25rem; border-radius:8px; border-left:4px solid #e67e22;">
+                <h3>📦 Package Ecosystem</h3>
+                <p>Access to a rich ecosystem of software through BSD-compatible packaging.</p>
+            </div>
+            <div style="background:#f8f9fa; padding:1.25rem; border-radius:8px; border-left:4px solid #9b59b6;">
+                <h3>🧰 Admin Tooling</h3>
+                <p>Predictable configuration files and tooling for automated deployments.</p>
+            </div>
+        </div>
+
+        <h2 id="downloads">Downloads</h2>
+        <p>Grab the latest release images and checksums from the official repository.</p>
+        <p>
+            <a class="btn" href="https://github.com/TTSConsulting/WSBSD/releases" target="_blank">Latest Releases</a>
+            <a class="btn" style="margin-left:.5rem; background: linear-gradient(135deg, #2ecc71, #27ae60);" href="/installation">Installation Guide</a>
+        </p>
+    </main>
+
+    <script>
+    // Logo toggle: switch between two logos or show both
+    (function() {
+        const items = document.querySelectorAll('.infobox-logo-item');
+        const controls = document.querySelectorAll('.infobox-logo-controls [data-show]');
+        if (!items.length || !controls.length) return;
+
+        function show(mode) {
+            if (mode === 'all') {
+                items.forEach(el => { el.style.display = ''; });
+                return;
+            }
+            items.forEach((el, i) => {
+                el.style.display = String(i) === String(mode) ? '' : 'none';
+            });
+        }
+
+        controls.forEach(btn => btn.addEventListener('click', () => show(btn.getAttribute('data-show'))));
+
+        // Default state: show all
+        show('all');
+    })();
+    </script>
+</body>
+</html>

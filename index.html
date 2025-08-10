@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WSBSD Wiki - Comprehensive documentation and guides for the WSBSD project">
+    <meta name="keywords" content="WSBSD, wiki, documentation, BSD, operating system">
+    <meta name="author" content="TTSConsulting">
+    <title>WSBSD Wiki - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">WSBSD Wiki</a>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="https://github.com/TTSConsulting/WSBSD" target="_blank">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Search wiki..." id="search-input">
+                <ul id="search-results" class="search-results" aria-label="Search results"></ul>
+            </div>
+            
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="/" class="active">🏠 Home</a></li>
+            </ul>
+        </aside>
+
+        <div class="content fade-in">
+            <h1>Welcome to WSBSD Wiki</h1>
+            
+            <p>Welcome to the comprehensive documentation hub for <strong>WSBSD</strong>. This wiki serves as your complete guide to understanding, installing, configuring, and using WSBSD effectively.</p>
+
+            <h2>What is WSBSD?</h2>
+            <p>WSBSD is a modern BSD-based operating system project developed by TTSConsulting. It combines the stability and security of traditional BSD systems with modern features and enhanced usability.</p>
+
+            <blockquote>
+                <p><strong>Note:</strong> WSBSD is actively developed and maintained. Check our <a href="https://github.com/TTSConsulting/WSBSD">GitHub repository</a> for the latest updates and releases.</p>
+            </blockquote>
+
+            <h2>Quick Start Guide</h2>
+            <p>New to WSBSD? Here's how to get started quickly:</p>
+
+            <h2>Key Features</h2>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3498db;">
+                    <h3>🔒 Security First</h3>
+                    <p>Built with security as a core principle, featuring advanced protection mechanisms and regular security updates.</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #2ecc71;">
+                    <h3>⚡ Performance</h3>
+                    <p>Optimized for speed and efficiency, delivering excellent performance across various hardware configurations.</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                    <h3>🛠️ Customizable</h3>
+                    <p>Highly configurable system that adapts to your specific needs and requirements.</p>
+                </div>
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f39c12;">
+                    <h3>🌐 Community</h3>
+                    <p>Active community support with comprehensive documentation and helpful resources.</p>
+                </div>
+            </div>
+
+            <h2>Latest News & Updates</h2>
+            <div style="background: #e8f5e8; border: 1px solid #2ecc71; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
+                <h3 style="color: #27ae60; margin-bottom: 1rem;">🎉 WSBSD v1.0.0.4-5 Released!</h3>
+                <p>We're excited to announce the release of WSBSD v1.0.0.4-5 with improved performance, and new BSD Versions.</p>
+            </div>
+
+            <h2>Getting Help</h2>
+            <p>Need assistance? Here are the best ways to get help:</p>
+            <ul>
+                <li><strong>Documentation:</strong> Browse through our comprehensive guides and tutorials</li>
+                <li><strong>Community Forum:</strong> Join discussions and ask questions in our community</li>
+                <li><strong>GitHub Issues:</strong> Report bugs or request features on our <a href="https://github.com/TTSConsulting/WSBSD/issues">GitHub repository</a></li>
+                <li><strong>Discord:</strong> Real-time chat with developers and community members</li>
+            </ul>
+
+            <h2>Contributing</h2>
+            <p>WSBSD is an open-source project and we welcome contributions! Whether you're interested in:</p>
+            <ul>
+                <li>🐛 <strong>Bug fixes</strong> - Help us identify and fix issues</li>
+                <li>✨ <strong>New features</strong> - Contribute new functionality</li>
+                <li>📝 <strong>Documentation</strong> - Improve our docs and tutorials</li>
+                <li>🧪 <strong>Testing</strong> - Help test new releases and features</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 TTSConsulting. WSBSD is open-source software released under the BSD License.</p>
+            <div class="footer-links">
+                <a href="https://github.com/TTSConsulting/WSBSD">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize interactions after DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simple search functionality (guarded)
+            const sidebar = document.querySelector('.sidebar');
+            const searchInput = document.getElementById('search-input');
+            const resultsEl = document.getElementById('search-results');
+
+            // Manifest of HTML pages to search (add more entries as you add pages)
+            const pages = [
+                { title: 'WSBSD – Overview', path: 'wiki/WSBSD.html' },
+                { title: 'Home', path: 'index.html' }
+            ];
+
+            function getMatches(q) {
+                if (!q) return [];
+                const query = q.toLowerCase();
+                return pages.filter(p => (p.title + ' ' + p.path).toLowerCase().includes(query));
+            }
+
+            function renderResults(list) {
+                if (!resultsEl) return;
+                resultsEl.innerHTML = '';
+                if (!list.length) { resultsEl.style.display = 'none'; return; }
+                list.slice(0, 10).forEach(p => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = p.path;
+                    a.textContent = p.title;
+                    li.appendChild(a);
+                    resultsEl.appendChild(li);
+                });
+                resultsEl.style.display = '';
+            }
+
+            if (searchInput && sidebar) {
+                searchInput.addEventListener('input', function (e) {
+                    const query = (e.target.value || '').toLowerCase().trim();
+
+                    // Filter existing sidebar links (optional)
+                    sidebar.querySelectorAll('a').forEach(link => {
+                        const li = link.closest('li');
+                        if (!li) return;
+                        const text = (link.textContent || '').toLowerCase();
+                        li.style.display = !query || text.includes(query) ? '' : 'none';
+                    });
+
+                    // Render search results from manifest
+                    const matches = getMatches(query);
+                    renderResults(matches);
+                });
+
+                // Enter key opens the first match
+                searchInput.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') {
+                        const query = (searchInput.value || '').trim();
+                        const matches = getMatches(query);
+                        if (matches.length) {
+                            window.location.href = matches[0].path;
+                        }
+                    }
+                });
+            }
+
+            // Add fade-in animation to content when page loads (guarded)
+            const content = document.querySelector('.content');
+            if (content) content.classList.add('fade-in');
+
+            // Smooth scrolling for anchor links (respect reduced motion)
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    // Ignore empty or placeholder hashes
+                    if (!href || href === '#' || href === '#!') return;
+                    const target = document.querySelector(href);
+                    if (!target) return;
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: prefersReduced ? 'auto' : 'smooth',
+                        block: 'start'
+                    });
+                    // Update URL hash without jumping
+                    if (history.pushState) {
+                        history.pushState(null, '', href);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
